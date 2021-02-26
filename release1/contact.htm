@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+       .navbar {overflow: hidden; background-color: #333;}
+       .navbar a {float: left; font-size: 16px; color: white; text-align: center; padding: 14px 16px; text-decoration: none;}
+       .dropdown {float: left; overflow: hidden;}
+       .dropdown .dropbtn {font-size: 16px; border: none; outline: none; color: white; padding: 14px 16px; background-color: inherit; font-family: inherit; margin: 0;}
+       .navbar a:hover, .dropdown:hover .dropbtn { background-color: red;}
+       .dropdown-content {display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+       .dropdown-content a {float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;}
+       .dropdown-content a:hover {background-color: #ddd;}
+       .dropdown:hover .dropdown-content {display: block;}
+
+       .d1 {border:5px outset slateblue; background-color: whitesmoke;}
+
+       h1{text-align: center;}
+       p {text-align: center;}
+       td {padding-right:40px}
+       form {text-align: center;}
+       table{margin-right:auto; margin-left: auto; width: 490px;}
+   </style>
+</head>
+<body>
+     <div class="navbar">
+         <a href="index.htm">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Shop Now 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="small.htm">Small</a>
+            <a href="medium.htm">Medium</a>
+            <a href="large.htm">Large</a>
+            <a href="xtralarge.htm">Xtra-Large</a>
+            <a href="miscellaneous.htm">Miscellaneous</a>
+          </div>
+        </div> 
+        <a href="aboutus.htm">About us</a>
+      </div>
+ <form method="post" 	action="http://wtspring13sec2.babson.edu/gordon/mailer.php">
+        <h1>Contact Us</h1>
+        <p>Please answer the following questions. When you are done,
+            please click on the Submit button.</p>
+            <p>First Name
+                <input type= "text" name="firstname" maxlength="100" value="Enter name here" />
+                Last Name
+                <input type= "text" name="lastname" maxlength="100" value="Enter name here" />
+            </p>
+             <p>
+                 Email
+                <input type= "text" name="email" maxlength="100" value="Enter email here" /> 
+                 </p>
+                 <p>
+                    Cell Phone
+                    <input type= "tel" name="cell" maxlength="100" value="Enter number here" /> 
+                </p>
+                <p>
+                    Instagram handle
+                    <input type= "text" name="ig" maxlength="100" value="Enter handle here" /> 
+                </p>
+                <p>
+                How would you like to be contacted?
+                    <select name="Howtocontact">
+                        <option value="Email">Email</option>
+                        <option value="Cell">Cell Phone</option>
+                        <option value="Insta">Instagram</option>
+                    
+                    </select>
+                </p>
+                <p>
+                How can we help you?
+                <select name="Howtohelp">
+                    <option value="Buy">Buy</option>
+                    <option value="Sell">Sell</option>
+                    <option value="Trade">Trade</option>
+                    <option value="Refund">Refund</option>
+                
+                </select>
+                </p>
+                     
+                
+                <textarea name="comments" rows="10" cols="45">
+Please add the name of the product you are interested in
+                </textarea>
+
+                <p>
+                    <input type="submit" value="Submit" name="Submit"  />
+                    <input type="reset" value="Reset" name="Reset" />
+          </p>
+        </form>
+</body>
+</html>
