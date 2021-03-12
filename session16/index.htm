@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Canvas Example</title>
+
+	<style>
+        canvas { border: 1px solid red; width:1000px; height:250px}
+        p {text-align: center;}
+        h1 {text-align: center;}
+	</style>
+	
+	<script>
+        var ctx;
+        var d=true;
+        function drawShape(){
+		var canvas = document.getElementById('tutorial');
+          canvas.width = 1000;
+          canvas.height = 250;
+        ctx = canvas.getContext('2d');
+        colorList = new Array("black","red","purple")
+        canvasAnimate();
+        }
+        
+        function canvasAnimate()
+        {
+            if (d==true)
+                {
+                    ctx.fillStyle=colorList[Math.floor(Math.random()*colorList.length)]
+                    rand1=Math.floor(Math.random()*1000);
+                    rand2=Math.floor(Math.random()*1000);
+                    rand3=50+Math.floor(Math.random()*250);
+                   ctx.fillRect(rand1,rand2,rand3,rand3);
+                    d=false;
+                }
+            else
+                {
+                    rand1=Math.floor(Math.random()*1000)
+                    rand2=Math.floor(Math.random()*1000)
+                    ctx.clearRect(rand1,rand2,50,50)
+                    d=true;
+                }
+            setTimeout("canvasAnimate()",10);
+		}
+	</script>
+  </head>
+
+  <body onload="drawShape()">
+<h1>Saving content... Please do not turn off your computer</h1>
+    <p> <canvas id="tutorial"></canvas> </p>
+  </body>
+</html>
+
