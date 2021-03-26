@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Page title goes here</title>
+
+	<style>
+	/* Your styles go here */
+	table {border-style: solid;}
+	</style>
+	
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script>
+	$(function(){
+	   // jQuery methods go here...
+
+	   
+$("#h").click(function(){
+	$("tr:odd").fadeOut(3000);
+})
+
+$("tr").click(function(){
+	$(this).fadeOut(3000);
+})
+$(function(){
+	$("#s").click(function(){
+		$("tr").fadeIn(3000);
+		$("tr:odd").css("background-color","yellow")
+	})
+})  
+	});
+
+	
+	/* Your additional JavaScript goes here */
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<table>
+		<tr>
+		  <td>1</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		</tr>
+		<tr>
+		  <td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+		</tr>
+	</table>
+
+	<button id="h">Hide Odd</button>
+	<button id="s">Show All</button>
+  </body>
+</html>
