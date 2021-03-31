@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery effects</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+        });
+        </script>
+
+        <script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+    $("#test1").text("He is all right now");
+  });
+});
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $("#btn2").click(function(){
+    $("ol").prepend("<li>More!</li>");
+  });
+});
+        </script>
+
+<script>
+    $(document).ready(function(){
+      $("#btn3").click(function(){
+        $("#div1").remove();
+      });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+      $("#btn4").click(function(){
+        $("p").toggleClass("blue");
+      });
+    });
+    </script>
+
+<script> 
+    $(document).ready(function(){
+      $("#btn5").click(function(){
+        $("div").animate({left: '250px'});
+      });
+    });
+    </script> 
+
+<script>
+    $(document).ready(function(){
+      $("#btn6").click(function(){
+        $("#divR").delay("slow").fadeIn();
+        $("#divO").delay("fast").fadeIn();
+        $("#divY").delay(800).fadeIn();
+        $("#divG").delay(1000).fadeIn();
+        $("#divB").delay(1200).fadeIn();
+        $("#divI").delay(1400).fadeIn();
+        $("#divV").delay(1600).fadeIn();
+      });
+    });
+    </script>
+
+        <style> 
+            #panel, #flip {
+              padding: 5px;
+              background-color: #e5eecc;
+              border: solid 1px #c3c3c3;
+            }
+            
+            #panel {
+              padding: 50px;
+              display: none;
+            }
+
+        
+.blue {
+  color: blue;
+}
+
+            </style>
+</head>
+<body>
+        
+<div id="flip">Click for more directions</div>
+<div id="panel">Click the buttons to see what happens... its not rocket science</div>
+
+<hr>
+<p id="test1">So this guy got his whole left side cut off... </p>
+<button id="btn1">Oh no!</button>
+
+<hr>
+<ol>
+    <li>food</li>
+    <li>shelter</li>
+    <li>money</li>
+  </ol>
+<button id="btn2">Click to add more</button>
+
+<hr>
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:green;">
+    <p>This is a rectangle</p>
+    
+    </div>
+    <br>
+    
+    <button id="btn3">Click to remove the rectangle</button>
+
+    <hr>
+    <button id="btn4">Turn some stuff blue</button>
+
+<hr>
+<button id="btn5">Click to move box</button>
+    <div style="background:#98bf21;height:100px;width:200px;position:absolute;"></div>
+
+<hr>
+    <button id="btn6">You found the secret button!</button>
+<br><br>
+
+<div id="divR" style="width:90px;height:90px;display:none;background-color:red;"></div><br>
+<div id="divO" style="width:90px;height:90px;display:none;background-color:orange;"></div><br>
+<div id="divY" style="width:90px;height:90px;display:none;background-color:yellow;"></div><br>
+<div id="divG" style="width:90px;height:90px;display:none;background-color:green;"></div><br>
+<div id="divB" style="width:90px;height:90px;display:none;background-color:blue;"></div><br>
+<div id="divI" style="width:90px;height:90px;display:none;background-color:indigo;"></div><br>
+<div id="divV" style="width:90px;height:90px;display:none;background-color:violet;"></div><br>
+</body>
+</html>
