@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title> 
+  <!--  Bootstrap2.htm -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <style type="text/css">
+  img {width: 200px; height:200px ;}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  </script>
+
+<script>
+  $(function(){
+    $("#test1").text("This is paragraph#1");
+  })
+</script>
+
+<script>
+  $(document).ready(function(){
+      $("img").click(function(){
+          // Change src attribute of image
+          $(this).attr("src", "IMG_3931.png");
+      });    
+  });
+  </script>
+
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header"><a class="navbar-brand" href="#">Internet.com</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="https://www.google.com">Google</a></li>
+        <li><a href="https://www.facebook.com">Facebook</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>A new website</h1>
+    <p id="test1">This is where the name of the website goes </p>
+  </div>
+  <div class="row">
+    <div class="col-sm-4" style="background-color: aquamarine;">
+      <p>This is first paragragh.</p>
+      <p>This is second paragraph.</p>
+    </div>
+    <div class="col-sm-4" style="background-color: blueviolet;">
+      <p>This is third paragraph.</p>
+      <p>This is fourth paragraph.</p>
+    </div>
+    <div class="col-sm-4" style="background-color: cornflowerblue;">
+      <p>This is fifth paragraph.</p>
+      <p>This is last paragraph.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="IMG_3931.png" alt="sedona1"/>
+    </div>
+    <div class="col-sm-4">
+      <img src="IMG_6554.jpeg" alt="sedona2"/>
+    </div>
+    <div class="col-sm-4">
+      <img src="IMG_7096.jpeg" alt="sedona3"/>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
