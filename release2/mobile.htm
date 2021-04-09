@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Clothing</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <style>
+h1{text-align: center;color: slateblue; font-size: xx-large;font-family: Georgia;}
+h2{color: slateblue; font-size: xx-large; text-align: left; padding-left: 20%; padding-top: 200px; padding-bottom: 180px;}
+h3 {color: slateblue; font-size: xx-large; text-align: center;}
+h5 {font-size: x-large; color: slateblue; text-align: center;}
+h6 {text-align: left;padding-left: 10%;}
+
+img {float:right; padding-right: 10%;}
+button {
+  background-color: royalblue;
+  width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid rebeccapurple;
+  color: white;
+  cursor: pointer;
+}
+
+.d2 {border:5px outset purple; background-color: lavenderblush; margin-left: 10%; margin-right: 10%;}
+p {font-size: x-large;color: black;}
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript"> </script>
+
+
+<script>
+function ChgStyle()
+{
+document.getElementById("myh1").style.color="red";
+document.getElementById("myh1").style.font="30pt 'Comic Sans MS'";
+document.getElementById("myh1").style.textAlign="center";
+} 
+</script>
+
+
+<script>
+
+var thoughts = new Array("'The most effective way to do it, is to do it' Amelia Earheart",
+		"'The best thing one can do when it is raining is to let it rain'- Henry Wadsworth Longfellow",
+		"'Whoever said money can't buy happiness didn't know where to shop'= Gertrude Stein",
+		"Artificial Intelligence is no match for Natural Stupidity",
+		"Never put off until tomorrow what you can avoid all together",
+		"Teamwork means never having to take all the blame yourself",
+		"The wisest mind has something yet to learn",
+		"Winners never quit and quitters never win",
+		"Time is money",
+    "Adults are just kids with money");
+    
+    function newThought()
+		{
+			var thoughtNumber=Math.floor(Math.random()*thoughts.length);
+			document.getElementById("p1").innerHTML=thoughts[thoughtNumber];
+		}
+
+ 
+</script>
+
+<script>
+  var imageList = new Array("IMG_8785.jpeg","IMG_8784.jpeg","IMG_8786.jpeg","IMG_8787.jpeg","IMG_8788.jpeg")  
+  var counter=0 
+  function playSlideShow()
+   {
+    document.getElementById("fi").src=imageList[counter] 
+          counter = counter+1	
+    if (counter == imageList.length)  
+    {
+      counter=0
+    }
+    setTimeout("playSlideShow()",2000) 
+  }
+</script>
+
+    <script>
+      var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+    </script>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Shop Now 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="small.htm">Small</a>
+            <a href="medium.htm">Medium</a>
+            <a href="large.htm">Large</a>
+            <a href="xtralarge.htm">Xtra-Large</a>
+            <a href="miscellaneous.htm">Miscellaneous</a>
+          </div>
+        </div> 
+        <a href="aboutus.htm">About us</a>
+      </div>
+    
+
+
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="d1">
+    <h1><i>Ideal Clothing</i></h1>
+    <p id="test1" style="color:darkblue; text-align: center;" >A place to buy, sell, and trade clothing with direct communication and zero fees </p>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6" style="background-color: aquamarine;">
+      
+<h2 id="myh1" onclick="ChgStyle()">Featured Items of the Week!
+  <br>
+  <br>
+  You can be
+  <span 
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "bold.", "sexy.", "irresistable.", "anything..." ]'></span>
+</h2>
+    </div>
+    <div class="col-sm-6" style="background-color: blueviolet;">
+      <h4 onmouseover="playSlideShow();"><a href="https://d39l2hkdp2esp1.cloudfront.net/img/type/T3319/c/T3319_00.jpg?20141104142069"></a>
+        <img id="fi" alt="Featured Item" src="https://d39l2hkdp2esp1.cloudfront.net/img/type/T3319/c/T3319_00.jpg?20141104142069"
+        width="500" height="500">
+      </h4>
+    </div>
+    <div class="col-sm-12" style="background-color: cornflowerblue;">
+      <div class= "d2">
+  
+        <h3>Quote of the day</h3>
+        
+        <p id="p1" style="text-align: center;">'If you ain't first, you're last'-Ricky Bobby</p>
+        <p><button id="btn1" onclick="newThought()">Click here for more</button></p>
+        </div>
+    </div>
+  </div>
+
+
+
+
+<hr>
+
+<h6><img src="yesno.jpeg" usemap="#yesno" alt="picture of choice" width="500" height="300"/></h6>
+
+<map name="yesno">
+  <area shape="rect" coords="0,0,250,300" href="howtoorder.htm" alt="yes"/> 
+  <area shape="rect" coords="250,0,500,300" href="thankyou.htm" alt="no"/>
+</map>
+
+<h5>First time customer?</h5>
+
+<h5><a href="contact.htm">Click here to contact us</a></h5>
+
+
+<iframe width="0" height="0" src="https://www.youtube.com/embed/2yJ1qTOWIuE?;autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body> 
+</html>

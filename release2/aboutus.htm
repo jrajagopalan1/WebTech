@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <style>
+
+        h1{text-align: center;}
+        p {text-align: center;}
+        td {padding-right:40px}
+	    form {text-align: center;}
+	    table{margin-right:auto; margin-left: auto; width: 490px;}
+
+        h3 {text-align: center;}
+    </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $(".su").click(function(){
+      $("#slider").slideUp();
+    });
+    $(".sd").click(function(){
+      $("#slider").slideDown();
+    });
+  });
+  </script>
+
+<script>
+  $(document).ready(function(){
+      $("#btn1").click(function(){
+  $("#test1").text("An egg");
+});
+});
+      </script>
+
+<script>
+  $(document).ready(function(){
+    $("#btn3").click(function(){
+      $("#div1").remove();
+    });
+  });
+  </script>
+
+<script>
+  $(document).ready(function(){
+    $("#btn6").click(function(){
+      $("#divR").delay("slow").fadeIn();
+      $("#divO").delay("fast").fadeIn();
+      $("#divY").delay(800).fadeIn();
+      $("#divG").delay(1000).fadeIn();
+      $("#divB").delay(1200).fadeIn();
+      $("#divI").delay(1400).fadeIn();
+      $("#divV").delay(1600).fadeIn();
+    });
+  });
+  </script>
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.htm">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Shop Now 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="small.htm">Small</a>
+            <a href="medium.htm">Medium</a>
+            <a href="large.htm">Large</a>
+            <a href="xtralarge.htm">Xtra-Large</a>
+            <a href="miscellaneous.htm">Miscellaneous</a>
+          </div>
+        </div> 
+        <a href="aboutus.htm">About us</a>
+      </div>
+
+      <div class= "d1">
+        <h1>About Ideal Clothing</h1>
+        <p id="slider">Ideal Clothing is a place to buy, sell, or trade clothing. We are a local business based out of Sherman Connecticut and we hope to provide <br>
+          a better way to shop for "one of a kind" items. We started this endeavor because we recognized a common problem in the second hand clothing industry that we <br>
+          can solve by creating a platform that acts as a middleman. Ideal Clothing serves as a way to save both parties money by cutting out unnecessary additional fees.
+         </p>
+         <button class="su">Slide up</button>
+<button class="sd">Slide down</button>
+    </div>
+
+<hr>
+
+    <h4>Solve this riddle for a discount at checkout</h4>
+    <p id="test1">What has to be broken before you can use it? </p>
+   
+
+    <div id="div1" style="height:500px;width:1000px;border:1px solid black;background-color:cyan;">
+      <p>Before you answer that, is this rectangle annoying?</p>
+      
+      </div>
+      <br>
+      <button id="btn3">Click to remove the rectangle</button>
+      <button id="btn1">That's better, now what is the answer?</button>
+    
+    <hr>
+
+   <h3><a href="verified.htm">Click here to view our verified sales</a></h3>
+    <h3><a href="contact.htm">Click here to contact us</a></h3>
+    <h3><a href="credits.htm">Credits</a></h3>
+     
+    <hr>
+
+    <h4><a href="https://www.salesforce.com/content/dam/blogs/us/Sept2018/trust_fourth_industrial_revolution.png"></a>
+      <img alt="Friendly" src="https://www.salesforce.com/content/dam/blogs/us/Sept2018/trust_fourth_industrial_revolution.png"
+      width="500" height="250">
+    </h4>
+    <button id="btn6">Secret Button: Do Not Press</button>
+    <br><br>
+    
+    <div id="divR" style="width:90px;height:90px;display:none;background-color:red;"></div><br>
+    <div id="divO" style="width:90px;height:90px;display:none;background-color:orange;"></div><br>
+    <div id="divY" style="width:90px;height:90px;display:none;background-color:yellow;"></div><br>
+    <div id="divG" style="width:90px;height:90px;display:none;background-color:green;"></div><br>
+    <div id="divB" style="width:90px;height:90px;display:none;background-color:blue;"></div><br>
+    <div id="divI" style="width:90px;height:90px;display:none;background-color:indigo;"></div><br>
+    <div id="divV" style="width:90px;height:90px;display:none;background-color:violet;"></div><br>
+    
+</body>
+</html>
